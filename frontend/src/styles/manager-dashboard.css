@@ -1,0 +1,219 @@
+/* Manager Dashboard Styles */
+.manager-dashboard-container {
+  padding: 20px;
+}
+
+.dashboard-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.dashboard-header p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.overview-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.overview-cards .card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.overview-cards .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.overview-cards .card h3 {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.overview-cards .card .number {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.card.total-employees .number {
+  color: #3b82f6;
+}
+
+.card.present .number {
+  color: #10b981;
+}
+
+.card.absent .number {
+  color: #ef4444;
+}
+
+.card.late .number {
+  color: #f59e0b;
+}
+
+.charts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.chart-box {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-box h2 {
+  color: #374151;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.department-stats {
+  margin-bottom: 40px;
+}
+
+.department-stats h2 {
+  color: #374151;
+  margin-bottom: 20px;
+}
+
+.departments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.dept-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dept-card h3 {
+  color: #374151;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 10px;
+}
+
+.dept-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.stat {
+  text-align: center;
+  padding: 10px;
+  background-color: #f9fafb;
+  border-radius: 6px;
+}
+
+.stat .label {
+  display: block;
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 5px;
+}
+
+.stat .value {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.value.present {
+  color: #10b981;
+}
+
+.value.absent {
+  color: #ef4444;
+}
+
+.value.late {
+  color: #f59e0b;
+}
+
+.absent-list {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.absent-list h2 {
+  color: #374151;
+  margin-bottom: 20px;
+}
+
+.absent-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.absent-list th,
+.absent-list td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.absent-list th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  color: #374151;
+}
+
+.absent-list tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #10b981;
+  font-weight: 600;
+  background-color: #d1fae5;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .charts-container {
+    grid-template-columns: 1fr;
+  }
+
+  .departments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dept-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-header h1 {
+    font-size: 24px;
+  }
+}

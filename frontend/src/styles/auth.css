@@ -1,0 +1,110 @@
+/* Auth Styles */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.auth-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+}
+
+.auth-box h1 {
+  color: #667eea;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.auth-box h2 {
+  color: #374151;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+
+.auth-box form {
+  margin-bottom: 20px;
+}
+
+.auth-box .btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+.auth-box p {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 20px;
+}
+
+.auth-box a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-box a:hover {
+  text-decoration: underline;
+}
+
+.demo-credentials {
+  background-color: #f0f9ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 6px;
+  padding: 15px;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.demo-credentials p {
+  margin: 5px 0;
+  text-align: left;
+  color: #1e40af;
+}
+
+.demo-credentials p:first-child {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Select Styles */
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: white;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+@media (max-width: 480px) {
+  .auth-box {
+    padding: 30px 20px;
+  }
+
+  .auth-box h1 {
+    font-size: 24px;
+  }
+
+  .auth-box h2 {
+    font-size: 18px;
+  }
+}
