@@ -26,6 +26,20 @@ export const register = createAsyncThunk(
   }
 );
 
+export const registerManager = createAsyncThunk(
+  'auth/registerManager',
+  async (userData, { rejectWithValue }) => {
+    try {
+      const response = await api.post('/auth/register-manager', userData);
+      localStorage.setItem('token', response.data.token);
+      localStorage.setItem('user', JSON.stringify(response.data.user));
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data.message);
+    }
+  }
+);
+
 export const getMe = createAsyncThunk('auth/getMe', async (_, { rejectWithValue }) => {
   try {
     const response = await api.get('/auth/me');
@@ -76,6 +90,19 @@ const authSlice = createSlice({
         state.token = action.payload.token;
       })
       .addCase(register.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      })
+      .addCase(registerManager.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(registerManager.fulfilled, (state, action) => {
+        state.loading = false;
+        state.user = action.payload.user;
+        state.token = action.payload.token;
+      })
+      .addCase(registerManager.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
       })
