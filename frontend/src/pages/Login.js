@@ -59,7 +59,7 @@ const Login = () => {
           Don't have an account? <Link to="/register">Register as Employee</Link>
         </p>
         <p>
-          Manager? <Link to="/manager-register">Register as Manager</Link>
+          Manager? <Link to="/ManagerRegister">Register as Manager</Link>
         </p>
         <div className="demo-credentials">
           <p><strong>Demo Credentials:</strong></p>
