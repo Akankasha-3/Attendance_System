@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { login } from '../store/authSlice';
 import '../styles/auth.css';
 
@@ -56,7 +56,10 @@ const Login = () => {
           </button>
         </form>
         <p>
-          Don't have an account? <a href="/register">Register here</a>
+          Don't have an account? <Link to="/register">Register as Employee</Link>
+        </p>
+        <p>
+          Manager? <Link to="/manager-register">Register as Manager</Link>
         </p>
         <div className="demo-credentials">
           <p><strong>Demo Credentials:</strong></p>
